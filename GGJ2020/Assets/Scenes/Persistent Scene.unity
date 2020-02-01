@@ -141,6 +141,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404999065, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1860824910}
     - target: {fileID: 5044212974884059694, guid: 198521f4fafca3f44b9b70b44291a790,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -203,52 +207,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}
---- !u!1 &1010325679 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3486427860910499551, guid: 1ba72a8547d625b499905c9f541a97a1,
+--- !u!20 &1860824910 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3486427860133597502, guid: 1ba72a8547d625b499905c9f541a97a1,
     type: 3}
   m_PrefabInstance: {fileID: 3486427860575469168}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1010325681 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3486427860910499521, guid: 1ba72a8547d625b499905c9f541a97a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3486427860575469168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010325679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01681231727fb38419f8add64ceee311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1010325683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010325679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af32a9f480d00794e8e95a91ceec5ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pairs:
-  - event: {fileID: 11400000, guid: ccca188457070af46b7258860ab76254, type: 2}
-    response:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1010325681}
-          m_MethodName: InspectorResetPosition
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &3486427860575469168
 PrefabInstance:
   m_ObjectHideFlags: 0
