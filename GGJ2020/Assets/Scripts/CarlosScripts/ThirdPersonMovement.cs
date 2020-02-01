@@ -7,8 +7,12 @@ using UnityEngine.InputSystem;
 using static Unity.Mathematics.math;
 
 namespace GGJ2020 {
+	/// <summary>
+	/// Controls the movement of a given Rigidbody, from the perpsective of the currently-attached Transform.
+	/// </summary>
 	public class ThirdPersonMovement : MonoBehaviour {
 #pragma warning disable 0649
+		[Header("Dependencies")]
 		[SerializeField] private PlayerInput playerInput;
 		[SerializeField] private new Rigidbody rigidbody;
 		[SerializeField] private new Collider collider;
@@ -16,12 +20,18 @@ namespace GGJ2020 {
 		[SerializeField] private ThirdPersonMovementSettings settings;
 #pragma warning restore 0649
 
+		private float3 startPosition;
+
 		private float2 inputMove;
 		private float inputMoveSqrMag;
 		private float3 desiredVelocity;
 		private bool isMoving;
 
 		#region Unity Messages
+		private void Awake() {
+			startPosition = rigidbody.position;
+		}
+
 		private void FixedUpdate() {
 			float3 velocity = rigidbody.velocity;
 			desiredVelocity = new float3(inputMove.x, 0, inputMove.y);
@@ -38,6 +48,11 @@ namespace GGJ2020 {
 		}
 		#endregion
 
+		#region Public Inspector Methods
+		public void InspectorResetPosition() {
+			rigidbody.position = startPosition;
+		}
+		#endregion
 
 		#region InputSystem Messages
 		private void OnMove(InputValue value) {
