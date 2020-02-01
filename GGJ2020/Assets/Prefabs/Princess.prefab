@@ -556,19 +556,6 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &7801460943756918048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8096343074461419581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82317c74e777e1e47bd5910b348e5f5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
 --- !u!114 &404999065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 4227791313378956260, guid: cdde4aeee8b880e44a15839238fe179d,
+    type: 3}
 --- !u!114 &404999066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +606,19 @@ MonoBehaviour:
   m_DefaultActionMap: Default
   m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
+--- !u!114 &7801460943756918048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096343074461419581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82317c74e777e1e47bd5910b348e5f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1001 &250530558402679092
 PrefabInstance:
   m_ObjectHideFlags: 0
