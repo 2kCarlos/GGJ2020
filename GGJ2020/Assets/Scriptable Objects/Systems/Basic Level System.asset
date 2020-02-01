@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Basic Level System
   m_EditorClassIdentifier: 
   firstLevel: 1
-  onLevelChanged: {fileID: 11400000, guid: 02ec4637985e21c4b8abd4ce9654054c, type: 2}
+  onLevelChanged: {fileID: 11400000, guid: ccca188457070af46b7258860ab76254, type: 2}
