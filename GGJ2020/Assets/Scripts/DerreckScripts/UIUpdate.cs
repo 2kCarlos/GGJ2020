@@ -19,7 +19,6 @@ namespace GGJ2020
         void Update()
         {
             
-            
             damage.text = "Damage: " + princess.Damage;
         }
     }
