@@ -12,6 +12,7 @@ namespace GGJ2020
             {
                 return damage;
             }
+            
             set
             {
                 damage = value;
@@ -27,7 +28,7 @@ namespace GGJ2020
             if (collision.gameObject.tag == "Knight")
             {
                 Debug.Log("Hit by the knight!");
-
+                Damage += 1; 
             }
         }
     }
