@@ -30,6 +30,8 @@ namespace GGJ2020 {
 				//normalizes the vector without needing additional calculations
 				desiredVelocity = settings.MoveSpeed * (desiredVelocity / sqrt(inputMoveSqrMag));
 				desiredVelocity = Quaternion.Euler(0, transform.eulerAngles.y, 0) * desiredVelocity;
+
+				rigidbody.rotation = Quaternion.LookRotation(desiredVelocity, Vector3.up);
 			}
 
 			rigidbody.AddForce(desiredVelocity - velocity, ForceMode.VelocityChange);
