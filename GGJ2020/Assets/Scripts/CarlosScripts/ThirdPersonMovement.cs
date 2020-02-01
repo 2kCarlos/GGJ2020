@@ -1,17 +1,20 @@
 ﻿using System;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 using static Unity.Mathematics.math;
 
 namespace GGJ2020 {
 	public class ThirdPersonMovement : MonoBehaviour {
+#pragma warning disable 0649
 		[SerializeField] private PlayerInput playerInput;
 		[SerializeField] private new Rigidbody rigidbody;
 		[SerializeField] private new Collider collider;
 		[Space(20)]
 		[SerializeField] private ThirdPersonMovementSettings settings;
+#pragma warning restore 0649
 
 		private float2 inputMove;
 		private float inputMoveSqrMag;
@@ -26,7 +29,7 @@ namespace GGJ2020 {
 				//Dividing by the length here (aka dividing by the sqrt of the squared magnitude)
 				//normalizes the vector without needing additional calculations
 				desiredVelocity = settings.MoveSpeed * (desiredVelocity / sqrt(inputMoveSqrMag));
-
+				desiredVelocity = Quaternion.Euler(0, transform.eulerAngles.y, 0) * desiredVelocity;
 			}
 
 			rigidbody.AddForce(desiredVelocity - velocity, ForceMode.VelocityChange);
