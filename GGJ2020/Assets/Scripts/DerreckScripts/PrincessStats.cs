@@ -1,8 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 namespace GGJ2020
 {
     public class PrincessStats : MonoBehaviour
     {
+        [SerializeField] private int damage;
+
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+            set
+            {
+                damage = value;
+            }
+        }
+        
         void Update()
         {
 
@@ -12,6 +27,7 @@ namespace GGJ2020
             if (collision.gameObject.tag == "Knight")
             {
                 Debug.Log("Hit by the knight!");
+
             }
         }
     }

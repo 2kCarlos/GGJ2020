@@ -472,6 +472,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25.793001, y: 0, z: 0}
+--- !u!1 &984154704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2428059176780443403, guid: 18244fc5075b6a04cb1c38a4c8511970,
+    type: 3}
+  m_PrefabInstance: {fileID: 2428059176133012827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &984154709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984154704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd84075f9cdbfc4696237f41baf7b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
 --- !u!1 &1530391820
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405078388642223313, guid: 198521f4fafca3f44b9b70b44291a790,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}

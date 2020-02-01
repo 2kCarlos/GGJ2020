@@ -3,6 +3,8 @@ namespace GGJ2020
 {
     public class KnightMovement : MonoBehaviour
     {
+        [SerializeField] private int movementSpeed;
+
         GameObject Player;
         void Start()
         {
@@ -13,7 +15,7 @@ namespace GGJ2020
         void Update()
         {
             transform.LookAt(Player.transform);
-
+            transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
         }
         
     }
