@@ -107,3 +107,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  ps: {fileID: 6686666968437529713, guid: 939821eda0b1064478b1ac9860377d77, type: 3}
