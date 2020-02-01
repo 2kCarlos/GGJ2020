@@ -7,17 +7,20 @@ namespace GGJ2020
     public class UIUpdate : MonoBehaviour
     {
         [SerializeField] private Text damage;
-        PrincessStats p = null;
+        //PrincessStats p = new PrincessStats();
+        [SerializeField] PrincessStats princess;
         // Start is called before the first frame update
         void Start()
         {
-
+            
         }
 
         // Update is called once per frame
         void Update()
         {
-            damage.text = "Damage: " + p.Damage;
+            
+            
+            damage.text = "Damage: " + princess.Damage;
         }
     }
 }
