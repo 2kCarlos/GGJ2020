@@ -16,4 +16,4 @@ MonoBehaviour:
     type: 2}
   nonMovingPhysicMaterial: {fileID: 13400000, guid: bdfb50bc19c63a64c9146848a18cd817,
     type: 2}
-  moveSpeed: 10
+  moveSpeed: 4
