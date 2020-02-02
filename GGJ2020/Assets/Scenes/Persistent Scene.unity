@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -99,7 +99,8 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: aebb8efe9198a5c4fb1280eddf149bd9,
     type: 2}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 743475045830ff64fa9b571d49b8116d,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -122,18 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!136 &40835370 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 8696322233635870127, guid: 198521f4fafca3f44b9b70b44291a790,
-    type: 3}
-  m_PrefabInstance: {fileID: 742527678}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &40835371 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3304158402842184704, guid: 198521f4fafca3f44b9b70b44291a790,
-    type: 3}
-  m_PrefabInstance: {fileID: 742527678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &742527678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,6 +196,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}
+--- !u!1 &1363027518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8096343074461419581, guid: 198521f4fafca3f44b9b70b44291a790,
+    type: 3}
+  m_PrefabInstance: {fileID: 742527678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1818360610 &1363027519
+ScaleConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363027518}
+  m_Enabled: 1
+  m_Weight: 1
+  m_ScaleAtRest: {x: 0.5, y: 0.5, z: 0.5}
+  m_ScaleOffset: {x: 1, y: 1, z: 1}
+  m_AffectScalingX: 1
+  m_AffectScalingY: 1
+  m_AffectScalingZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
+--- !u!136 &1363027523 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4466237265134310499, guid: 198521f4fafca3f44b9b70b44291a790,
+    type: 3}
+  m_PrefabInstance: {fileID: 742527678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1363027524 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 831389850183623713, guid: 198521f4fafca3f44b9b70b44291a790,
+    type: 3}
+  m_PrefabInstance: {fileID: 742527678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1860824910 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3486427860133597502, guid: 1ba72a8547d625b499905c9f541a97a1,
@@ -284,11 +310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rigidbody
       value: 
-      objectReference: {fileID: 40835371}
+      objectReference: {fileID: 1363027524}
     - target: {fileID: 3486427860910499521, guid: 1ba72a8547d625b499905c9f541a97a1,
         type: 3}
       propertyPath: collider
       value: 
-      objectReference: {fileID: 40835370}
+      objectReference: {fileID: 1363027523}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba72a8547d625b499905c9f541a97a1, type: 3}
