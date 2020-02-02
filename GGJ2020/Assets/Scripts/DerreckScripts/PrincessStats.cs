@@ -7,6 +7,11 @@ namespace GGJ2020
     {
         public static bool allKeyFrags;
 
+        [SerializeField] private AudioClip Hurtclip;
+        [SerializeField] private AudioClip Pedestalclip;
+        [SerializeField] private AudioClip Doorclip2;
+        [SerializeField] private AudioSource source;
+        //[SerializeField] private 
         [SerializeField] private int damage;
         [SerializeField] private GameObject[] keyFrags;
         //[SerializeField] private GameRuntime gameRuntime;
@@ -41,10 +46,6 @@ namespace GGJ2020
         
         void Update()
         {
-           if(SceneManager.GetActiveScene().isLoaded)
-            {
-                
-            }
             //keyFrags = GameObject.FindGameObjectsWithTag("KeyFrags");
             
             print(keyFrags.Length);
@@ -68,6 +69,7 @@ namespace GGJ2020
             if (collision.gameObject.tag == "Knight")
             {
                 Debug.Log("Hit by the knight!");
+                AudioSource.PlayClipAtPoint(Hurtclip, transform.position);
                 Damage += 1; 
             }
 
@@ -75,6 +77,7 @@ namespace GGJ2020
 
             if(collision.gameObject.tag == "Pedestal")
             {
+
                 contact = true;
                 //OnFire();
             }
@@ -97,8 +100,9 @@ namespace GGJ2020
                     {
                         keyFrags[i].SetActive(true);
 
-                    }
 
+                    }
+                    AudioSource.PlayClipAtPoint(Pedestalclip, transform.position);
                     if(num == 3)
                     {
                         print("Resetting num! ");
@@ -125,6 +129,7 @@ namespace GGJ2020
         #region Public Inspector Methods
         public void InspectorRestart()
         {
+            AudioSource.PlayClipAtPoint(Hurtclip, transform.position);
             Restart();
         }
         #endregion
