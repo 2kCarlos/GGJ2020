@@ -129,10 +129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 404999065, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 1860824910}
     - target: {fileID: 1015947642991493395, guid: 198521f4fafca3f44b9b70b44291a790,
         type: 3}
       propertyPath: camera
@@ -200,31 +196,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198521f4fafca3f44b9b70b44291a790, type: 3}
---- !u!1 &1363027518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8096343074461419581, guid: 198521f4fafca3f44b9b70b44291a790,
-    type: 3}
-  m_PrefabInstance: {fileID: 742527678}
-  m_PrefabAsset: {fileID: 0}
---- !u!1818360610 &1363027519
-ScaleConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363027518}
-  m_Enabled: 1
-  m_Weight: 1
-  m_ScaleAtRest: {x: 0.5, y: 0.5, z: 0.5}
-  m_ScaleOffset: {x: 1, y: 1, z: 1}
-  m_AffectScalingX: 1
-  m_AffectScalingY: 1
-  m_AffectScalingZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
 --- !u!136 &1363027523 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 4466237265134310499, guid: 198521f4fafca3f44b9b70b44291a790,
