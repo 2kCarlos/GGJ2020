@@ -1,22 +1,30 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 namespace GGJ2020
 {
     public class PrincessStats : MonoBehaviour
     {
+        public static bool allKeyFrags;
+
         [SerializeField] private int damage;
-        GameObject[] keyFrags;
+        [SerializeField] private GameObject[] keyFrags;
+        //[SerializeField] private GameRuntime gameRuntime;
         bool contact;
+        
         int num = 0;
 
         private void Start()
         {
+            //ILevelSystem levelSys = gameRuntime.Locator.Resolve<ILevelSystem>();
+            //levelSys.OnLevelChanged.RegisterListener()
             keyFrags = GameObject.FindGameObjectsWithTag("KeyFrags");
-            for(int i = 0; i< keyFrags.Length; i++)
+            for(int i = 0; i < keyFrags.Length; i++)
             {
                 keyFrags[i].SetActive(false);
             }
         }
+        
         public int Damage
         {
             get
@@ -30,9 +38,30 @@ namespace GGJ2020
             }
         }
         
+        
         void Update()
         {
+           if(SceneManager.GetActiveScene().isLoaded)
+            {
+                
+            }
+            //keyFrags = GameObject.FindGameObjectsWithTag("KeyFrags");
+            
+            print(keyFrags.Length);
+            if (keyFrags[0] != null && keyFrags[1] != null && keyFrags[2] != null)
+            {
+                if (keyFrags[0].activeInHierarchy && keyFrags[1].activeInHierarchy && keyFrags[2].activeInHierarchy)
+                {
+                    print("All active in Hierarchy!");
+                    allKeyFrags = true;
 
+                }
+                else
+                {
+                    //Start();
+                    allKeyFrags = false;
+                }
+            }
         }
         private void OnCollisionEnter(Collision collision)
         {
@@ -41,7 +70,8 @@ namespace GGJ2020
                 Debug.Log("Hit by the knight!");
                 Damage += 1; 
             }
-            
+
+           
 
             if(collision.gameObject.tag == "Pedestal")
             {
@@ -66,11 +96,38 @@ namespace GGJ2020
                     for(int i = 0; i< num; i++)
                     {
                         keyFrags[i].SetActive(true);
+
+                    }
+
+                    if(num == 3)
+                    {
+                        print("Resetting num! ");
+                        num = 0;
                     }
                     PrincessInventory.keyFragments -= 1;
                 }
 
             }
         }
+        public void Restart()
+        {
+            if (SceneManager.GetActiveScene().isLoaded)
+            {
+                print("It has been loaded! Restart!!");
+                keyFrags = GameObject.FindGameObjectsWithTag("KeyFrags");
+                for (int i = 0; i < keyFrags.Length; i++)
+                {
+                    keyFrags[i].SetActive(false);
+                }
+            }
+        }
+
+        #region Public Inspector Methods
+        public void InspectorRestart()
+        {
+            Restart();
+        }
+        #endregion
+
     }
 }

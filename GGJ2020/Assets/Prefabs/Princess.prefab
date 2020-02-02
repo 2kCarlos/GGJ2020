@@ -556,6 +556,25 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!1818360610 &1363027519
+ScaleConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096343074461419581}
+  m_Enabled: 1
+  m_Weight: 1
+  m_ScaleAtRest: {x: 0.5, y: 0.5, z: 0.5}
+  m_ScaleOffset: {x: 1, y: 1, z: 1}
+  m_AffectScalingX: 1
+  m_AffectScalingY: 1
+  m_AffectScalingZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!114 &1015947642991493395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,6 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  keyFrags: []
 --- !u!114 &6970346185716198070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +639,34 @@ MonoBehaviour:
   m_DefaultActionMap: Default
   m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
+--- !u!114 &9023318255693221992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096343074461419581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af32a9f480d00794e8e95a91ceec5ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairs:
+  - event: {fileID: 11400000, guid: ccca188457070af46b7258860ab76254, type: 2}
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2289532196890942835}
+          m_MethodName: InspectorRestart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &250530558402679092
 PrefabInstance:
   m_ObjectHideFlags: 0
