@@ -8106,6 +8106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle Knight
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 75a7b5202b917564e8c1550d83942c3d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75a7b5202b917564e8c1550d83942c3d, type: 3}
 --- !u!4 &1069217319 stripped
