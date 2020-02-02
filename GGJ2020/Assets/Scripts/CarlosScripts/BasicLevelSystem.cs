@@ -33,5 +33,9 @@ namespace GGJ2020 {
 			};
 		}
 
+		//private static void Test() {
+		//	Collider possiblyGround = null;
+		//	Debug.Log("Collided with " + (possiblyGround == null ? "null" : possiblyGround.name));
+		//}
 	}
 }
